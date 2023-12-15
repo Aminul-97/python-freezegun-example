@@ -2,6 +2,7 @@ import pytest
 from freezegun import freeze_time
 from datetime import datetime
 
+
 def get_greeting():
     current_time = datetime.now()
     if current_time.hour < 12:
@@ -18,6 +19,7 @@ def test_get_greeting_default():
     greeting = get_greeting()
     assert greeting in ["Good morning!", "Good afternoon!", "Good evening!"]
 
+
 # Test case with frozen time using freezegun
 @freeze_time("2023-01-01 12:00:00")
 def test_get_greeting_frozen_time():
@@ -25,9 +27,9 @@ def test_get_greeting_frozen_time():
     greeting = get_greeting()
     assert greeting == "Good afternoon!"
 
+
 # Another test case with a different frozen time
 @freeze_time("2023-01-01 20:00:00")
 def test_get_greeting_frozen_time_evening():
     greeting = get_greeting()
     assert greeting == "Good evening!"
-
