@@ -16,7 +16,7 @@ def setup_environment():
     engine = create_database()
     Session = sessionmaker(bind=engine)
     session = Session()
-    return engine, session
+    yield engine, session
 
 
 # Fixture to create table
@@ -24,12 +24,12 @@ def setup_environment():
 def create_table(setup_environment):
     engine = setup_environment[0]
     User = create_user_table(engine)
-    return User
+    yield User
 
 
 # Testing adding and quering data
 @freeze_time("2023-12-14 23:31:00")
-def test_database(setup_environment, create_table):
+def test_create_user(setup_environment, create_table):
     session = setup_environment[1]
     User = create_table
     # Adding a new user to database
