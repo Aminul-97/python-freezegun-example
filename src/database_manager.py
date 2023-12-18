@@ -3,14 +3,17 @@ from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 def create_database():
-    # Create an SQLite database in memory for this example
+    """
+    Creating an SQLite database in memory for this example
+    """
     engine = create_engine('sqlite:///:memory:', echo=False)
     return engine
 
 def create_user_table(engine):
+    """
+    Define a simple User model
+    """
     Base = declarative_base()
-
-    # Define a simple User model
     class User(Base):
         __tablename__ = 'users'
         id = Column(Integer, Sequence('user_id_seq'), primary_key=True)
@@ -23,11 +26,15 @@ def create_user_table(engine):
     return User
 
 def add_user(session, user):
-    # Add a new user to the database
+    """
+    Add a new user to the database
+    """
     session.add(user)
     session.commit()
 
 def query_user(session, User, name):
-    # Query the database to retrieve the user
+    """
+    Query the database to retrieve the user
+    """
     queried_user = session.query(User).filter_by(name=name).first()
     return queried_user
