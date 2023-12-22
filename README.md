@@ -1,4 +1,4 @@
-# pytest-verbose-example
+# **Professionally Testing Time-Dependent Code with Freezegun**
 This repo contains the sample code for the article - **Professionally Testing Time-Dependent Code with Freezegun**
 
 # Requirements
