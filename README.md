@@ -1,5 +1,5 @@
 # pytest-verbose-example
-This repo contains the sample code for the article - pytest fixture not found
+This repo contains the sample code for the article - **Professionally Testing Time-Dependent Code with Freezegun**
 
 # Requirements
 * Python (3.10.6)
