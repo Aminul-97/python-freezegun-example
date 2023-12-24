@@ -1,5 +1,5 @@
 # Freezegun Example Code
-This repo contains the sample code for the article - **Professionally Testing Time-Dependent Code with Freezegun**
+This repo contains the sample code for the article - **A Simple Guide To Controlling Time in Pytest using Freezegun**
 
 # Requirements
 * Python (3.10.6)
