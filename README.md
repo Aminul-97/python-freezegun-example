@@ -1,5 +1,5 @@
-# Freezegun Example Code
-This repo contains the sample code for the article - **A Simple Guide To Controlling Time in Pytest using Freezegun**
+# Python Freezegun Example Code
+This repo contains the sample code for the article - [A Simple Guide To Controlling Time in Pytest Using Freezegun](https://pytest-with-eric.com/plugins/python-freezegun/)
 
 # Requirements
 * Python (3.11)
